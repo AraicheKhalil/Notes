@@ -196,16 +196,16 @@ export default function App() {
       <Toaster /> 
       <div className="container w-full">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold p-6">Address Notes List</h1>
+          <h1 className="text-2xl font-semibold py-6 sm:p-6">Address Notes List</h1>
           <Button className="bg-green-500 px-2" onClick={openAddModal}>
             <Plus /> 
           </Button>
         </div>
-        <p className="px-6 max-w-[650px] text-gray-500">Easily create, update, and delete contact notes with our intuitive interface. also for data management and real-time notifications to stay organized and connected!</p>
-        <div className="p-6 flex gap-6 flex-wrap">
+        <p className="sm:px-6 max-w-[650px] text-gray-500">Easily create, update, and delete contact notes with our intuitive interface. also for data management and real-time notifications to stay organized and connected!</p>
+        <div className="py-6 sm:p-6 flex gap-6 flex-wrap">
           {notes.length > 0 ? (
             notes.map((note: Note) => (
-              <Card key={note._id} className="min-w-[350px] shadow-lg mb-8">
+              <Card key={note._id} className="max-sm:w-full sm:min-w-[350px]  shadow-lg mb-8">
                 <CardHeader>
                   <CardTitle className="text-blue-500 mb-1">{note.FullName}</CardTitle>
                   <p className="flex gap-2 text-sm">
@@ -236,7 +236,7 @@ export default function App() {
 
         {isEditModalOpen && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white p-6 rounded-lg w-96">
+            <div className="max-sm:mx-2 bg-white p-6 rounded-lg w-96">
               <h2 className="text-xl font-semibold mb-4">Edit Note</h2>
               <div className="space-y-4">
                 <div>
@@ -282,8 +282,8 @@ export default function App() {
         )}
 
         {isAddModalOpen && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white p-6 rounded-lg w-96">
+          <div className=" fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+            <div className="bg-white max-sm:mx-2 p-6 rounded-lg w-96">
               <h2 className="text-xl font-semibold mb-4">Add New Note</h2>
               <div className="space-y-4">
                 <div>
