@@ -34,7 +34,7 @@ export default function App() {
   useEffect(() => {
     const GetNotes = async () => {
 
-      await new Promise((res) => setTimeout(res,6000))
+      await new Promise((res) => setTimeout(res,3000))
       try {
         const res = await fetch('https://noteaddresssapp.onrender.com/api/v1/notes/');
         if (!res.ok) throw new Error("Failed to fetch notes");
